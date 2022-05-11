@@ -28,3 +28,14 @@ AFTER state_province;
 --note: in the table sql
 ////////
 6-
+ALTER TABLE locations
+ADD PRIMARY KEY (location_id);
+--note: in the table sql
+//////
+7-
+SELECT first_name AS firstname , last_name AS lastname
+FROM employees;
+8-
+SELECT *
+FROM employees
+ORDER BY first_name DESC;
