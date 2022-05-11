@@ -1,0 +1,30 @@
+1-
+SELECT location_id, street_address, city, state_province, country_name
+FROM locations
+NATURAL JOIN countries
+//////////
+2-
+SELECT first_name, last_name, department_id, department_name
+FROM employees
+JOIN departments USING (department_id);
+///////////
+3-
+SELECT e.first_name, e.last_name, e.job_id, d.department_id, d.department_name
+FROM employees e
+JOIN departments d 
+ON (e.department_id = d.department_id)
+JOIN locations l ON
+(d.location_id = l.location_id)
+WHERE l.city = 'amman';
+/////////
+4-
+RENAME TABLE country TO country_new; 
+--note: in the table sql
+///////
+5-
+ALTER TABLE locations
+ADD region_id int(10) 
+AFTER state_province;
+--note: in the table sql
+////////
+6-
